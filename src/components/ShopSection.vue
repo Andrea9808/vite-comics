@@ -40,7 +40,7 @@ export default {
 
 <template>
 
-    <div>
+    <div class="container">
 
         <ul class="bg">
             <li v-for="link in links">
@@ -63,10 +63,14 @@ export default {
 @use '../Styles/partials/_variables.scss' as *;
 @use '../Styles/partials/mixins' as *;
 
-.bg{
+.container{
+    width: 100%;
     background-color: rgb(31 116 224);
+}
+.bg{
     padding: 30px 0;
     @include center;
+    width: 100%;
 }
 
 

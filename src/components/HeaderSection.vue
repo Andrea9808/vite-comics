@@ -93,7 +93,6 @@ export default {
 .bg {
     background-color: $primary;
     margin-top: 40px;
-    
 }
 
 .container{
