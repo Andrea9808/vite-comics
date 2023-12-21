@@ -40,9 +40,9 @@ export default {
 
 <template>
 
-    <div class="bg">
+    <div>
 
-        <ul>
+        <ul class="bg">
             <li v-for="link in links">
                 <img :src="link.img" alt="link.text">
                 <a :href="link.url">
@@ -59,6 +59,7 @@ export default {
 
 
 <style lang = 'scss' scoped>
+
 @use '../Styles/partials/_variables.scss' as *;
 @use '../Styles/partials/mixins' as *;
 
@@ -77,8 +78,8 @@ img{
 li {
     text-decoration: none;
     list-style-type: none;
-    display: inline-block;
-    padding-right: 50px;
+    @include center;
+    margin-left: 30px;
   
     a {
         text-decoration: none;
