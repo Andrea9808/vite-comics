@@ -61,25 +61,26 @@ export default {
 </script>
 
 <template>
-
     <div class="bg">
 
-        <div>
-            <img class="logo" src="/public/img/dc-logo.png" alt="logoDC">
+        <div class="container">
+            <div>
+                <img class="logo" src="/public/img/dc-logo.png" alt="logoDC">
+            </div>
+
+            <div>
+                <ul class="navbar">
+                    <li v-for="link in links">
+                        <a :href="link.url" :class="link.current ? 'active' : ''">
+                            {{ link.text }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div>
-            <ul class="navbar">
-                <li v-for="link in links">
-                    <a :href="link.url" :class="link.current ? 'active' : ''">
-                        {{ link.text }}
-                    </a> 
-                </li>
-            </ul>
-        </div>
 
     </div>
-
 </template>
 
 
@@ -92,6 +93,10 @@ export default {
 .bg {
     background-color: $primary;
     margin-top: 40px;
+    
+}
+
+.container{
     @include around;
 }
 
@@ -101,23 +106,21 @@ export default {
     margin: 10px;
 }
 
-.navbar li{
+.navbar li {
     text-decoration: none;
     list-style-type: none;
     display: inline-block;
 
-    a{
+    a {
         text-decoration: none;
         margin-right: 10px;
         color: black;
     }
 }
 
-.active{
+.active {
     color: blue;
     padding-bottom: 28px;
     border-bottom: 3px solid blue;
 }
-
-
 </style>
