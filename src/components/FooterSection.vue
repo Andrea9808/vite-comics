@@ -68,7 +68,7 @@ export default {
 
 
             <div class="logo_bg">
-                <img src="/public/img/dc-logo-bg.png" alt="logo-bg">
+                
             </div>
         </div>
 
@@ -109,10 +109,14 @@ export default {
         list-style-type: none;
     }
 
-    img {
-        width: 300px;
 
-    }
+}
+
+.logo_bg{
+    background-image: url(public/img/dc-logo-bg.png);
+    width: 30%;
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
