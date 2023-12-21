@@ -7,13 +7,14 @@ export default {
 </script>
 
 <template>
-
     <div class="bg">
 
-        <h1 class="title"> - - > CONTENT GOES HERE </h1>
+        <div class="container">
 
+            <h1 class="title"> - - > CONTENT GOES HERE </h1>
+
+        </div>
     </div>
-
 </template>
 
 
@@ -23,13 +24,13 @@ export default {
 @use '../Styles/partials/_variables.scss' as *;
 @use '../Styles/partials/mixins' as *;
 
-.bg{
-    height: 72px;
-    @include around;
+.container {
+    max-width: 1170px;
+    margin: 30px auto;
+    display: flex;
 }
 
-.title{
-    color: $primary;;
+.title {
+    color: $primary;
 }
-
 </style>

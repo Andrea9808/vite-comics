@@ -96,13 +96,15 @@ export default {
 }
 
 .container{
-    @include around;
+    max-width: 1170px;
+    margin: 0 auto;
+    @include between;
 }
 
 .logo {
     background-color: transparent;
     height: 50px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .navbar li {

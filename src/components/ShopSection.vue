@@ -3,9 +3,9 @@
 export default {
     name: "ShopSection",
 
-    data(){
-        return{
-            links:[
+    data() {
+        return {
+            links: [
                 {
                     img: "public/img/buy-comics-digital-comics.png",
                     text: "DIGITAL COMICS",
@@ -39,57 +39,61 @@ export default {
 </script>
 
 <template>
+    <div class="bg">
+        <div class="container">
 
-    <div class="container">
+            <ul>
+                <li v-for="link in links">
+                    <img :src="link.img" alt="link.text">
+                    <a :href="link.url">
+                        {{ link.text }}
+                    </a>
+                </li>
+            </ul>
 
-        <ul class="bg">
-            <li v-for="link in links">
-                <img :src="link.img" alt="link.text">
-                <a :href="link.url">
-                  {{ link.text }}  
-                </a>
-            </li>
-        </ul>
-
+        </div>
     </div>
-
 </template>
 
 
 
 
 <style lang = 'scss' scoped>
-
 @use '../Styles/partials/_variables.scss' as *;
 @use '../Styles/partials/mixins' as *;
 
-.container{
-    width: 100%;
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.bg {
     background-color: rgb(31 116 224);
-}
-.bg{
     padding: 30px 0;
-    @include center;
-    width: 100%;
 }
 
 
-img{
+img {
     width: 40px;
     height: 40px;
 }
 
-li {
+
+ul{
+    @include center;
+
+    li {
     text-decoration: none;
     list-style-type: none;
     @include center;
-    margin-left: 30px;
-  
+    margin-left: 80px;
+
     a {
         text-decoration: none;
         color: white;
         margin-left: 10px;
     }
+}
 }
 
 </style>

@@ -33,19 +33,21 @@ export default {
 
 <template>
     <div class="bg">
-        <div>
-            <button>SIGN-UP NOW!</button>
-        </div>
+        <div class="container">
+            <div>
+                <button>SIGN-UP NOW!</button>
+            </div>
 
-        <div>
-            <ul>
-                <h5><strong>FOLLOW US</strong></h5>
-                <li v-for="link in links">
-                    <a href="link.url">
-                        <img :src="link.img" alt="">
-                    </a>
-                </li>
-            </ul>
+            <div>
+                <ul>
+                    <h5><strong>FOLLOW US</strong></h5>
+                    <li v-for="link in links">
+                        <a :href="link.url">
+                            <img :src="link.img" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -59,8 +61,14 @@ export default {
 
 .bg {
     background-color: rgb(39 35 35);
+   
+}
+
+.container{
+    width: 1170px;
     @include between;
-    padding: 20px 210px;
+    padding: 20px 0;
+    margin: auto;
 }
 
 h5 {
