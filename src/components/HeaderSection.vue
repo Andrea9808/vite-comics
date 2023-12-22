@@ -92,7 +92,6 @@ export default {
 
 .bg {
     background-color: $primary;
-    margin-top: 40px;
 }
 
 .container{
@@ -122,6 +121,6 @@ export default {
 .active {
     color: blue;
     padding-bottom: 28px;
-    border-bottom: 3px solid blue;
+    border-bottom: 4px solid blue;
 }
 </style>
