@@ -96,10 +96,17 @@ export default {
 <template>
     <div class="bg">
 
+        <img src="/public/img/jumbotron.jpg" alt="">
+
+
+
         <div class="container">
 
-            <ComicsSection v-for ="(comic,i) in comics" :key="i"
-            :details = "comic"/>
+            <div class="current">
+                <span class="current_series">CURRENT SERIES</span>
+            </div>
+
+            <ComicsSection v-for="(comic, i) in comics" :key="i" :details="comic" />
 
         </div>
     </div>
@@ -112,11 +119,32 @@ export default {
 @use '../Styles/partials/_variables.scss' as *;
 @use '../Styles/partials/mixins' as *;
 
+
+
 .container {
     max-width: 1170px;
     margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+    height: 530px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.current {
+    width: 100%;
+}
+
+.current_series{
+    background-color: blue;
+    padding: 15px 50px;
+    color: $primary;
+    position: absolute;
+    top: 584px;
 }
 
 .title {
