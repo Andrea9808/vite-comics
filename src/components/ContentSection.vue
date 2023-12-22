@@ -123,7 +123,7 @@ export default {
 
 .container {
     max-width: 1170px;
-    margin: 30px auto;
+    margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
 }

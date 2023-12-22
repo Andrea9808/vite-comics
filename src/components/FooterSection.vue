@@ -97,7 +97,7 @@ export default {
 
     a {
         color: gray;
-        font-size: 12px;
+        font-size: 14px;
         text-decoration: none;
 
         &:hover {
@@ -127,7 +127,7 @@ export default {
 
 
     .navbar_footer {
-        margin-top: 20px;
+        margin: 20px 0;
         display: flex;
     }
 
